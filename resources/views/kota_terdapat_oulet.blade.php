@@ -32,7 +32,7 @@
                 @foreach ($kotaChunks as $chunk)
                     <tr>
                         @foreach ($chunk as $k)
-                            <td><a href="{{ route('outlets', ['id_kota' => $k->id]) }}">{{ $k->nama_kota }}</a></td>
+                            <td><a href="{{ route('outlets', ['id_kota' => $k->id]) }}">{{ $k->nama }}</a></td>
                         @endforeach
 
                         @if ($chunk->count() < 6)
