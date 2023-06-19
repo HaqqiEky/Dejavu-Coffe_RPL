@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/Kota', function () {
-    return view('kota_terdapat_oulet');
-});
-
 Route::get('/Outlet', function () {
     return view('outlet_berdasarkan_kota');
 });
@@ -35,3 +32,5 @@ Route::get('/Register', [RegisterController::class, 'index']);
 Route::post('/Session/Register', [RegisterController::class, 'store']);
 
 Route::get('/Dashboard', [HomeController::class, 'home']);
+
+Route::get('/Kota', [KotaController::class, 'index']);

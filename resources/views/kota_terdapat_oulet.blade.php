@@ -25,30 +25,23 @@
             <div class="choose-city-text">Select the city closest to you</div>
             <div class="city-box">
                 <table class="city-table" cellspacing="10">
+                @php
+                    $kotaChunks = $kota->chunk(6); // Mengelompokkan data kota menjadi beberapa array dengan 6 elemen per array
+                @endphp
+
+                @foreach ($kotaChunks as $chunk)
                     <tr>
-                        <td>Bandung</td>
-                        <td>Yogyakarta</td>
-                        <td>Malang</td>
-                        <td>Tangerang</td>
-                        <td>Kediri</td>
-                        <td>Manado</td>
+                        @foreach ($chunk as $k)
+                            <td><a href="{{ route('outlets', ['id_kota' => $k->id]) }}">{{ $k->nama_kota }}</a></td>
+                        @endforeach
+
+                        @if ($chunk->count() < 6)
+                            @for ($i = 0; $i < 6 - $chunk->count(); $i++)
+                                <td></td> <!-- Tambahkan kolom kosong jika jumlah elemen kurang dari 6 -->
+                            @endfor
+                        @endif
                     </tr>
-                    <tr>
-                        <td>Jakarta</td>
-                        <td>Pekanbaru</td>
-                        <td>Palu</td>
-                        <td>Depok</td>
-                        <td>Palembang</td>
-                        <td>Toraja</td>
-                    </tr>
-                    <tr>
-                        <td>Surabaya</td>
-                        <td>Semarang</td>
-                        <td>Bekasi</td>
-                        <td>Bogor</td>
-                        <td>Padang</td>
-                        <td>Kendari</td>
-                    </tr>
+                @endforeach
                 </table>
             </div>
         </div>
