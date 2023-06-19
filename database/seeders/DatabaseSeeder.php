@@ -6,6 +6,8 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Kota;
+use App\Models\Outlet;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,5 +23,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'haqqi@gmail.com',
             'password' => Hash::make('arwank111'),
         ]);
+
+        $kota = new Kota();
+        $outlet = new Outlet();
+
+        Kota::insert($kota->fillTable());
+        Outlet::insert($outlet->fillTable());
     }
 }

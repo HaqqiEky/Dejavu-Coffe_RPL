@@ -12,7 +12,7 @@
             <table class="header-box">
                 <tr>
                     <td class="logo-text">DejaVu C<img src="./assets/logo.png" class="logo-nav-bar">offee</td>
-                    <td class="login-button">LOGIN</td>
+                    <td class="login-button"> <a href="/Login" class="login-text">LOGIN</a></td>
                     <td class="home-button">HOME</td>
                     <td class="about-button">ABOUT</td>
                     <td class="contact-button">CONTACT</td>
@@ -22,7 +22,7 @@
             <div class="nav-bar-pic-box"><img src="./assets/nav-bar_pic.png" class="nav-bar-pic"></div>
         </div>
         <div class="container">
-            <div class="find-outlet-button">Find an our outlet</div>
+            <div class="find-outlet-button"><a href="/Login" class="find-outlet-text">Find an our outlet</a></div>
             <table class="popular-baverage-table">
                 <tr>
                     <td class="popular-baverage-text" colspan="5">Popular Baverage</td>
