@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/Register', function () {
+    return view('session/register');
+});
+
+Route::get('/Login', [SessionController::class, 'index']);
+Route::post('/Session/Login', [SessionController::class, 'store']);
+
+Route::get('/Register', [RegisterController::class, 'index']);
+Route::post('/Session/Register', [RegisterController::class, 'store']);
+
+Route::get('/Dashboard', [HomeController::class, 'home']);

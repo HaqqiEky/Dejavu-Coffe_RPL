@@ -2,6 +2,7 @@
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
+use App\Http\Controller\SessionController;
 
 define('LARAVEL_START', microtime(true));
 
