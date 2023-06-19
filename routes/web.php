@@ -17,11 +17,15 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/Register', function () {
-    return view('session/register');
+Route::get('/Kota', function () {
+    return view('kota_terdapat_oulet');
+});
+
+Route::get('/Outlet', function () {
+    return view('outlet_berdasarkan_kota');
 });
 
 Route::get('/Login', [SessionController::class, 'index']);
