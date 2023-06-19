@@ -35,11 +35,11 @@
                 <td><img src="./public/assets/blended-cream/caramel-cream-frappucino.jpg" class="list-menu"><div class="category-text">BLENDED CREAM</div></td>
             </tr>
             <tr>
-                <td><img src="./public/assets/blended-tea/manggo passion frappuccino.jpg" class="list-menu"><div class="category-text">BLENDED TEA</div></td>
-                <td><img src="./public/assets/brewed-coffee/cold brew.jpg" class="list-menu"><div class="category-text">BREWED COFFEE</div></td>
+                <td><img src="./public/assets/blended-tea/manggo-passion-frappuccino.jpg" class="list-menu"><div class="category-text">BLENDED TEA</div></td>
+                <td><img src="./public/assets/brewed-coffee/cold-brew.jpg" class="list-menu"><div class="category-text">BREWED COFFEE</div></td>
             </tr>
             <tr>
-                <td><img src="./public/assets/espresso-beverage/caffe latte.jpg" class="list-menu"><div class="category-text">ESPRESSO</div></td>
+                <td><img src="./public/assets/espresso-beverage/caffe-latte.jpg" class="list-menu"><div class="category-text">ESPRESSO</div></td>
             </tr>
         </table>
     </div>
