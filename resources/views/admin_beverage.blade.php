@@ -28,7 +28,7 @@
                 </div>
                 <div class="beverage-box">
                     <img src="./assets/beverage.svg" class="beverage-logo">
-                    <div class="beverage-text">beverage</div>
+                    <div class="beverage-text">Beverage</div>
                 </div>
                 <div class="archive-box">
                     <img src="./assets/trash.svg" class="archive-logo">
