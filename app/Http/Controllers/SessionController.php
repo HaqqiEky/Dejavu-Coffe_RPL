@@ -25,9 +25,18 @@ class SessionController extends Controller
         $dataLogin = $request->only('email', 'password');
 
         if (Auth::attempt($dataLogin)) {
-            return redirect('/Dashboard');
+
+            $request->session()->regenerate();
+            return redirect('/Home')->with(['success' => 'Anda telah masuk ke sistem.']);
         }
 
         return back()->withErrors(['email' => 'Email atau Password tidak valid']);
+    }
+
+    public function destroy()
+    {
+        Auth::logout();
+
+        return redirect('/Login')->with(['success' => 'Anda telah keluar dari sistem.']);
     }
 }

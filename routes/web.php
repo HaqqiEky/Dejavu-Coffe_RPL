@@ -22,14 +22,16 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/Login', [SessionController::class, 'index']);
-Route::post('/Session/Login', [SessionController::class, 'store']);
-
 Route::get('/Register', [RegisterController::class, 'index']);
 Route::post('/Session/Register', [RegisterController::class, 'store']);
 
-Route::get('/Dashboard', [HomeController::class, 'home']);
+Route::get('/Login', [SessionController::class, 'index'])->name('Login');
+Route::post('/Session/Login', [SessionController::class, 'store']);
+Route::post('/Logout', [SessionController::class, 'destroy'])->name('Logout');
 
-Route::get('/Kota', [KotaController::class, 'index']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/Home', [HomeController::class, 'home'])->name('home');
+    Route::get('/Kota', [KotaController::class, 'index']);
+    Route::get('/Outlet/{id_kota}', [OutletController::class, 'index'])->name('outlets');
+});
 
-Route::get('/Outlet/{id_kota}', [OutletController::class, 'index'])->name('outlets');

@@ -11,7 +11,7 @@ class OutletController extends Controller
     public function index($id_kota)
     {
         $kota = Kota::findOrFail($id_kota);
-        $outlets = Outlet::where('id_kota', $id_kota)->orWhereNotNull('id_kota')->get();
+        $outlets = Outlet::where('id_kota', $id_kota)->get();
 
         return view('outlet_berdasarkan_kota', compact('kota', 'outlets'));
     }

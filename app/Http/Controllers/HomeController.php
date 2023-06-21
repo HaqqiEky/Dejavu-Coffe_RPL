@@ -9,7 +9,12 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $user = Auth::user();
-        return view('dashboard', compact('user'));
+        $user = auth()->user();
+        
+        if ($user->can('pembeli')) {
+            return view('pembeli.home', compact('user'));
+        } else {
+            abort(403, 'Forbidden');
+        }
     }
 }
