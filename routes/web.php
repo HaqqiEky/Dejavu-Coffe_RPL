@@ -18,9 +18,7 @@ use App\Http\Controllers\OutletController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index'])->name('landing');
 
 Route::get('/Register', [RegisterController::class, 'index']);
 Route::post('/Session/Register', [RegisterController::class, 'store']);

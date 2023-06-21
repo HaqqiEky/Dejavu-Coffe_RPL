@@ -16,7 +16,7 @@
                             @csrf
                             <button type="submit" class="nav-link text-body font-weight-bold px-0 py-0" style="border: none; background: none;">
                                 <i class="fa fa-sign-out-alt ms-sm-1"></i>    
-                                <span class="d-sm-inline d-none">Keluar</span>
+                                <span class="d-sm-inline d-none">LOGOUT</span>
                             </button>
                         </form>
                     <td class="home-button">HOME</td>

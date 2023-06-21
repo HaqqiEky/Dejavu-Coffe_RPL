@@ -37,6 +37,6 @@ class SessionController extends Controller
     {
         Auth::logout();
 
-        return redirect('/Login')->with(['success' => 'Anda telah keluar dari sistem.']);
+        return redirect('/')->with(['success' => 'Anda telah keluar dari sistem.']);
     }
 }
