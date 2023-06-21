@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_kota');
             $table->string('nama');
             $table->string('alamat');
+            $table->string('gambar');
             $table->string('jam_buka');
             $table->string('jam_tutup');
             $table->foreign('id_kota')->references('id')->on('kotas')->onDelete('cascade');

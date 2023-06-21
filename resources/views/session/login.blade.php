@@ -11,7 +11,7 @@
             <table class="header-box">
                 <tr>
                     <td class="logo-text">DejaVu C<img src="./assets/logo.png" class="logo-nav-bar">offee</td>
-                    <td class="login-button">LOGIN</td>
+                    <td class="login-button"> <a href="/Login" class="login-text">LOGIN</a></td>
                     <td class="home-button">HOME</td>
                     <td class="about-button">ABOUT</td>
                     <td class="contact-button">CONTACT</td>
@@ -33,8 +33,8 @@
                     <input type = "password" name = "password" id='password' class="input-password" type="password" placeholder="Password" required>
 
                     <button name ="submit" type="submit" class="input-button"> Login </button>
-
                 </form>
+                <div><a class = "link-register" href = "/Register">Dont have an account? Click here!</a></div>
             </div>
         </div>
 

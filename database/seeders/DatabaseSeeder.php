@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Kota;
 use App\Models\Outlet;
+use App\Models\Category;
+use App\Models\Menu;
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,8 +28,12 @@ class DatabaseSeeder extends Seeder
 
         $kota = new Kota();
         $outlet = new Outlet();
+        $category = new Category();
+        $menu = new Menu();
 
         Kota::insert($kota->fillTable());
         Outlet::insert($outlet->fillTable());
+        Category::insert($category->fillTable());
+        Menu::insert($menu->fillTable());
     }
 }

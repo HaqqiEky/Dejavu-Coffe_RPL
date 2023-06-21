@@ -12,7 +12,15 @@
             <table class="header-box">
                 <tr>
                     <td class="logo-text">DejaVu C<img src="./assets/logo.png" class="logo-nav-bar">offee</td>
-                    <td class="login-button">LOGIN</td>
+                    <td class = "login-button">
+                        <form  action="{{ route('Logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="nav-link text-body font-weight-bold px-0 py-0" style="border: none; background: none;">
+                                <i class="fa fa-sign-out-alt ms-sm-1"></i>    
+                                <a class="login-text">LOGOUT</a>
+                            </button>
+                        </form>
+                    </td>
                     <td class="home-button">HOME</td>
                     <td class="about-button">ABOUT</td>
                     <td class="contact-button">CONTACT</td>
