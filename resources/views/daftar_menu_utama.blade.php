@@ -30,10 +30,14 @@
     </div>
     <div class="content">
         <table class="content-table" border="0">
-            @foreach ($category as  $k)
-                <tr>
-                    <td><img src="{{ asset($k -> gambar) }}" class="list-menu"><div class="category-text">{{ $k->nama }}</div></td>
-                </tr>
+            @foreach ($category as $index => $k)
+                @if ($loop->iteration % 2 == 1)
+                    <tr>
+                @endif
+                <td><img src="{{ asset($k->gambar) }}" class="list-menu"><div class="category-text">{{ $k->nama }}</div></td>
+                @if ($loop->iteration % 2 == 0 || $loop->last)
+                    </tr>
+                @endif
             @endforeach
         </table>
     </div>

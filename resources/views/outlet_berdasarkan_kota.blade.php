@@ -33,23 +33,27 @@
             <div class="city-name">{{ $kota->nama }}</div>
             <hr>
             <table class="outlet-table" cellspacing="10">
-                @foreach ($outlets as $outlet)
-                    <tr>
-                        <td>
-                            <table class="content-table">
-                                <tr>
-                                    <td class="outlet-name">{{ $outlet->nama }}</td>
-                                    <td rowspan="3"><img class = "store-pic" src="{{ asset($outlet->gambar) }}" alt="Outlet Image"></td>
-                                </tr>
-                                <tr>
-                                    <td class="outlet-address">{{ $outlet->alamat }}</td>
-                                </tr>
-                                <tr>
-                                    <td class="outlet-status">{{ $outlet->jam_buka }} - {{ $outlet->jam_tutup }}</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+                @foreach ($outlets as $index => $k)
+                    @if ($loop->iteration % 2 == 1)
+                        <tr>
+                    @endif
+                    <td>
+                        <table class="content-table">
+                            <tr>
+                                <td class="outlet-name">{{ $k->nama }}</td>
+                                <td rowspan="3"><img class = "store-pic" src="{{ asset($k->gambar) }}" alt="Outlet Image"></td>
+                            </tr>
+                            <tr>
+                                <td class="outlet-address">{{ $k->alamat }}</td>
+                            </tr>
+                            <tr>
+                                <td class="outlet-status">{{ $k->jam_buka }} - {{ $k->jam_tutup }}</td>
+                            </tr>
+                        </table>
+                    </td>
+                    @if ($loop->iteration % 2 == 0 || $loop->last)
+                        </tr>
+                    @endif
                 @endforeach
             </table>
         </div>

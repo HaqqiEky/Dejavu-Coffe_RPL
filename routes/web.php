@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KotaController;
 use App\Http\Controllers\OutletController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/Kota', [KotaController::class, 'index']);
     Route::get('/Outlet/{id_kota}', [OutletController::class, 'index'])->name('outlets');
     Route::get('/Category', [CategoryController::class, 'index']);
+    Route::get('/Category/{id_category}', [MenuController::class, 'index'])->name('menu');
 });
 
