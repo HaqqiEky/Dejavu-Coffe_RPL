@@ -163,6 +163,12 @@ body {
     border-top-right-radius: 300px;
     margin-top: 33px;
 }
+.menu-form{
+    left: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 .custom {
     left: 10%;
     position: relative;
@@ -533,6 +539,16 @@ body {
     top: -44px;
     left: 397.5px;
 }
+.amount-text {
+    width: 100px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    color: #57381B;
+    border: 0px solid transparent;
+    text-align: center;
+}
 .to-chart-button {
     display: flex;
     flex-direction: column;
@@ -542,16 +558,20 @@ body {
     width: 300px;
     height: 60px;
     background: #57381B;
-    border-radius: 20px;
+    border-radius: 20px; 
+    position: relative;
+    left: 267.5px;  
+    top: -80px;
+}
+.to-chart-text {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
     line-height: 20px;
-    color: #FFFFFF; 
-    position: relative;
-    left: 267.5px;  
-    top: -80px;
+    color: #FFFFFF;
+    background: #57381B;
+    border: 0px solid transparent
 }
 .social-media-box {
     width: 100%;
