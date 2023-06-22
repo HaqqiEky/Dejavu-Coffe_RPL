@@ -175,10 +175,12 @@ body {
 
 .container-2{
     width: 100%;
-    height: 700px;
+    height: auto;
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .metode-payment-box{
@@ -256,6 +258,14 @@ body {
     font-size: 20px;
     font-family: Poppins;
     font-weight: 700;
+}
+
+.warning-text{
+    color: #57381B;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 700;
+    margin-top: 50px;
 }
 
 .social-media-box {
