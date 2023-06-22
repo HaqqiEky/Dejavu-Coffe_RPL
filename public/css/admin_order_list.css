@@ -78,6 +78,8 @@ body {
     left: 20px;
 }
 .order-box {
+    background: rgba(87, 56, 27, 0.28);
+    border-radius: 8px;
     top: 30px;
     width: 200px;
     position: relative;
@@ -128,8 +130,6 @@ body {
     left: 20px;
 }
 .beverage-box {
-    background: rgba(87, 56, 27, 0.28);
-    border-radius: 8px;
     top: 90px;
     width: 200px;
     position: relative;
