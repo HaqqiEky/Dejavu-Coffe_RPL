@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:900,400,600,500,700|400");
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.header {
+    width: 100%;
+    height: 303px;
+}
+.header-box {
+    width: 100%;
+    height: 108px;
+    background: #FFF8EE;
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+.logo-text {
+    color: rgba(74,23,22,1);
+    position: relative;
+    top: 0px;
+    left: 40px;
+    font-family: Righteous;
+    font-weight: Regular;
+    font-size: 30px;
+    opacity: 1;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+.logo-nav-bar {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    left: 0px;
+}
+.login-button {
+    width: 100px;
+    color: rgba(160,114,94,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+.home-button {
+    width: 100px;
+    color: rgba(160,114,94,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+.about-button {
+    width: 100px;
+    color: rgba(160,114,94,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+.contact-button {
+    width: 100px;
+    color: rgba(160,114,94,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 20px;
+    opacity: 1;
+    text-align: center;
+}
+.logo-chart-box {
+    width: 100px;
+    text-align: left;
+    opacity: 1;
+}
+.logo-chart {
+    width: 28px;
+    height: 28px;
+    top: 0px;
+    left: 20px;
+    position: relative;
+}
+.nav-bar-pic-box {
+    top: 0px;
+    right: 0px;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.nav-bar-pic {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.container-1{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.status-page{
+    width: 70%;
+    height: 77px;
+    display: flex;
+    justify-content: center;
+}
+
+.circle-cart{
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 3px solid #57381B;
+    position: relative;
+    left: 7px;
+}
+
+.status-line{
+    width: 330px;
+    height: 1px;
+    background: #57381B;
+}
+
+.circle-payment{
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 3px solid #57381B;
+    background: #57381B;
+    position: relative;
+    left: 30px;
+}
+
+.circle-finish{
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 3px solid #57381B;
+    position: relative;
+    left: 12px;
+}
+
+.status-text{
+    color: #57381B;
+    font-size: 20px;
+    font-family: Poppins;
+}
+
+.container-2{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.metode-payment-box{
+    display: flex;
+    justify-content: center;
+    width: 728px;
+    height: 591px;
+    flex-shrink: 0;
+    background: var(--3rd-color, #FFF8EE);
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+.button-payment{
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #57381B;
+    position: relative;
+    left: 4px;
+    top: 4px;
+}
+
+.payment-text{
+    color: var(--second-color, #A0725F);
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.payment-description{
+    
+    color: rgba(87, 56, 27, 0.75);
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 500;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bank-pic{
+    width: 150px;
+    height: 43.652px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 35%;
+}
+
+.continue-shop-button{
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #57381B;
+    position: relative;
+    left: 32%;
+    margin-top: 80px;
+}
+
+.continue-shop-text{
+    color: #FFF;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 700;
+}
+
+.social-media-box {
+    width: 100%;
+    height: 198px;
+    background: rgba(69,40,7,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+.social-media-text {
+    width: auto;
+    color: rgba(255,255,255,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 32px;
+    opacity: 1;
+    text-align: center;
+}
+.whatsapp-logo {
+    width: 85.53px;
+    height: 80px;
+    position: relative;
+    text-align: right;
+}
+.whatsapp-text {
+    width: 33%;
+    color: rgba(255,248,238,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+}
+.instagram-logo {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.instagram-text {
+    width: 34%;
+    color: rgba(255,248,238,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+}
+.twitter-logo {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.twitter-text {
+    width: 33%;
+    color: rgba(255,248,238,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: center;
+}
+.copyright-box {
+    width: 100%;
+    height: 100px;
+    background: rgba(160,114,94,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+.copyright-text {
+    color: rgba(255,248,238,1);
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 19px;
+    opacity: 1;
+    text-align: center;
+}
