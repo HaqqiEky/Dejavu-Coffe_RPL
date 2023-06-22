@@ -10,6 +10,7 @@ use App\Models\Kota;
 use App\Models\Outlet;
 use App\Models\Category;
 use App\Models\Menu;
+use App\Models\Diskon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,10 +31,12 @@ class DatabaseSeeder extends Seeder
         $outlet = new Outlet();
         $category = new Category();
         $menu = new Menu();
+        $diskon = new Diskon();
 
         Kota::insert($kota->fillTable());
         Outlet::insert($outlet->fillTable());
         Category::insert($category->fillTable());
         Menu::insert($menu->fillTable());
+        Diskon::insert($diskon->fillTable());
     }
 }

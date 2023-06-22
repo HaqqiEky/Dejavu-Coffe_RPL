@@ -13,6 +13,6 @@ class OutletController extends Controller
         $kota = Kota::findOrFail($id_kota);
         $outlets = Outlet::where('id_kota', $id_kota)->get();
 
-        return view('outlet_berdasarkan_kota', compact('kota', 'outlets'));
+        return view('pembeli.outlet_berdasarkan_kota', compact('kota', 'outlets'));
     }
 }

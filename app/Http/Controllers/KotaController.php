@@ -11,6 +11,6 @@ class KotaController extends Controller
     {
         $kota = Kota::all();
 
-        return view('kota_terdapat_oulet')->with('kota', $kota);
+        return view('pembeli.kota_terdapat_oulet')->with('kota', $kota);
     }
 }

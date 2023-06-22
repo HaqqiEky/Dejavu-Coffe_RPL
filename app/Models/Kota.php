@@ -9,7 +9,7 @@ class Kota extends Model
 {
     use HasFactory;
 
-    protected $tabel = 'kotas';
+    protected $table = 'kotas';
 
     protected $fillable = [
         'nama',

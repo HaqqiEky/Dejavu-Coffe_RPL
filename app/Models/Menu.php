@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    protected $tabel = 'menus';
+    protected $table = 'menus';
 
     protected $fillable = [
         'nama',
@@ -19,6 +19,10 @@ class Menu extends Model
 
     public function Category() {
         return $this->belongsTo(Category::class, 'id_category');
+    }
+
+    public function Carts() {
+        return $this->belongsToMany(Cart::class, 'carts_menus', 'menu_id', 'cart_id');
     }
 
     public function fillTable()

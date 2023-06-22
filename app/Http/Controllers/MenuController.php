@@ -13,6 +13,13 @@ class MenuController extends Controller
         $category = Category::findOrFail($id_category);
         $menu = Menu::where('id_category', $id_category)->get();
 
-        return view('daftar_cabang_menu', compact('category', 'menu'));
+        return view('pembeli.daftar_cabang_menu', compact('category', 'menu'));
+    }
+
+    public function variant($id)
+    {
+        $menu = Menu::where('id', $id)->get();
+
+        return view('pembeli.cutomer_variant', compact('menu'));
     }
 }

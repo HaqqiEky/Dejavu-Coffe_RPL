@@ -9,7 +9,7 @@ class Outlet extends Model
 {
     use HasFactory;
 
-    protected $tabel = 'outlets';
+    protected $table = 'outlets';
 
     protected $fillable = [
         'nama',

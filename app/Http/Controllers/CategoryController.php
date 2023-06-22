@@ -11,6 +11,6 @@ class CategoryController extends Controller
     {
         $category = Category::all();
 
-        return view('daftar_menu_utama')->with('category', $category);
+        return view('pembeli.daftar_menu_utama')->with('category', $category);
     }
 }

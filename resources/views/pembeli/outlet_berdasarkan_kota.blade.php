@@ -40,7 +40,7 @@
                     <td>
                         <table class="content-table">
                             <tr>
-                                <td class="outlet-name">{{ $k->nama }}</td>
+                                <td class="outlet-name"><a class="outlet-name" href="{{ route('category') }}">{{ $k->nama }}</a></td>
                                 <td rowspan="3"><img class = "store-pic" src="{{ asset($k->gambar) }}" alt="Outlet Image"></td>
                             </tr>
                             <tr>

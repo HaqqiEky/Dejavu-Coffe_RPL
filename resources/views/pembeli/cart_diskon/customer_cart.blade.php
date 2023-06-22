@@ -4,24 +4,25 @@
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet" />
-        <link href="./css/customer_cart.css" rel="stylesheet" />
+        <link href="/css/customer_cart.css" rel="stylesheet" />
         <title>Document</title>
     </head>
     <body>
         <div class="header">
             <table class="header-box">
                 <tr>
-                    <td class="logo-text">DejaVu C<img src="./assets/logo.png" class="logo-nav-bar">offee</td>
+                    <td class="logo-text">DejaVu C<img src="/assets/logo.png" class="logo-nav-bar">offee</td>
                     <td class="login-button">LOGIN</td>
                     <td class="home-button">HOME</td>
                     <td class="about-button">ABOUT</td>
                     <td class="contact-button">CONTACT</td>
-                    <td class="logo-chart-box"><img src="./assets/shopping-cart.png" class="logo-chart"></td>
+                    <td class="logo-chart-box"><img src="/assets/shopping-cart.png" class="logo-chart"></td>
                 </tr>
             </table>
-            <div class="nav-bar-pic-box"><img src="./assets/nav-bar_pic.png" class="nav-bar-pic"></div>
+            <div class="nav-bar-pic-box"><img src="/assets/nav-bar_pic.png" class="nav-bar-pic"></div>
         </div>
         <div class="container">
+            
             <div class="payment-head">
                 <div class="cart-icon">
                     <div class="cart-circle"></div>
@@ -50,51 +51,41 @@
                     <td class="order-info-head-text">Total</td>
                     <td class="order-info-head-text">Action</td>
                 </tr>
+                @php
+                    $orderSubtotal = 0; // Inisialisasi subtotal pesanan
+                @endphp
+                @foreach($carts as $cart)
+                @php
+                    $subtotal = $cart->harga * $cart->jumlah;
+                $orderSubtotal += $subtotal; // Menambahkan subtotal item ke subtotal pesanan
+                @endphp
                 <tr>
-                    <td class="order-info-detail">Caramel Frappucino</td>
-                    <td class="order-info-detail">2</td>
-                    <td class="order-info-detail">Rp 40.000</td>
-                    <td class="order-info-detail">Large</td>
-                    <td class="order-info-detail">Less Sugar</td>
-                    <td class="order-info-detail">Less Ice</td>
-                    <td class="order-info-detail">Whip</td>
-                    <td class="order-info-detail">Rp 80.000</td>
+                    <td class="order-info-detail">{{ $cart->nama }}</td>
+                    <td class="order-info-detail">{{ $cart->jumlah }}</td>
+                    <td class="order-info-detail">Rp {{ $cart->harga }}</td>
+                    <td class="order-info-detail">{{ $cart->size }}</td>
+                    <td class="order-info-detail">{{ $cart->sugar }}</td>
+                    <td class="order-info-detail">{{ $cart->ice }}</td>
+                    <td class="order-info-detail">{{ $cart->whip }}</td>
+                    <td class="order-info-detail">Rp {{ $subtotal }}</td>
                     <td class="order-info-detail">X</td>
                 </tr>
-                <tr>
-                    <td class="order-info-detail">Caramel Frappucino</td>
-                    <td class="order-info-detail">2</td>
-                    <td class="order-info-detail">Rp 40.000</td>
-                    <td class="order-info-detail">Large</td>
-                    <td class="order-info-detail">Less Sugar</td>
-                    <td class="order-info-detail">Less Ice</td>
-                    <td class="order-info-detail">Whip</td>
-                    <td class="order-info-detail">Rp 80.000</td>
-                    <td class="order-info-detail">X</td>
-                </tr>
-                <tr>
-                    <td class="order-info-detail">Caramel Frappucino</td>
-                    <td class="order-info-detail">2</td>
-                    <td class="order-info-detail">Rp 40.000</td>
-                    <td class="order-info-detail">Large</td>
-                    <td class="order-info-detail">Less Sugar</td>
-                    <td class="order-info-detail">Less Ice</td>
-                    <td class="order-info-detail">Whip</td>
-                    <td class="order-info-detail">Rp 80.000</td>
-                    <td class="order-info-detail">X</td>
-                </tr>
-                <tr>
-                    <td class="order-info-detail">Caramel Frappucino</td>
-                    <td class="order-info-detail">2</td>
-                    <td class="order-info-detail">Rp 40.000</td>
-                    <td class="order-info-detail">Large</td>
-                    <td class="order-info-detail">Less Sugar</td>
-                    <td class="order-info-detail">Less Ice</td>
-                    <td class="order-info-detail">Whip</td>
-                    <td class="order-info-detail">Rp 80.000</td>
-                    <td class="order-info-detail">X</td>
-                </tr>
+                @endforeach
             </table>
+            @php
+                $totalDiskon = 0;
+                $diskonAmount = 0;
+
+                foreach ($diskon as $diskonItem) {
+                    if ($subtotal >= $diskonItem->minimal && $subtotal <= $diskonItem->maximal_disc) {
+                        $totalDiskon = $subtotal * ($diskonItem->discount / 100);
+                        break;
+                    }
+                }
+
+                $subtotal -= $totalDiskon;
+                $diskonAmount = $totalDiskon;
+            @endphp
             <div class="voucher-button-box">
                 <div class="voucher-button">Get Code Voucher</div>
             </div>
@@ -105,11 +96,11 @@
                     </tr>
                     <tr>
                         <td class="subtotal-text">Order Subtotal</td>
-                        <td class="subtotal-text">40k</td>
+                        <td class="subtotal-text">Rp {{ $orderSubtotal }}</td>
                     </tr>
                     <tr>
                         <td class="subtotal-text">Diskon Amount</td>
-                        <td class="subtotal-text">-5k</td>
+                        <td class="subtotal-text">- Rp {{ $diskonAmount }}</td>
                     </tr>
                     <tr>
                         <td class="subtotal-text">Total</td>
@@ -143,5 +134,6 @@
                 </tr>
             </table>
         </div>
+        <script></script>
     </body>
 </html>
