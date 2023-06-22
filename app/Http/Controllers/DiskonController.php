@@ -17,7 +17,7 @@ class DiskonController extends Controller
     
     public function cart($id_diskon)
     {
-        $diskon = Diskon::where($id_diskon);
+        $diskon = Diskon::findOrFail($id_diskon);
         $carts = Cart::join('menus', 'carts.id_menu', '=', 'menus.id')
             ->select('carts.*', 'menus.nama as nama', 'menus.harga as harga')
             ->get();

@@ -73,21 +73,26 @@
                 @endforeach
             </table>
             @php
-                $totalDiskon = 0;
-                $diskonAmount = 0;
-
-                foreach ($diskon as $diskonItem) {
-                    if ($subtotal >= $diskonItem->minimal && $subtotal <= $diskonItem->maximal_disc) {
-                        $totalDiskon = $subtotal * ($diskonItem->discount / 100);
-                        break;
-                    }
+                if($diskon->minimum <= $orderSubtotal)
+                {
+                    $totalDiskon = $orderSubtotal * ($diskon->discount / 100);
+                }
+                else
+                {
+                    $totalDiskon = 0;
                 }
 
-                $subtotal -= $totalDiskon;
-                $diskonAmount = $totalDiskon;
+                if ($totalDiskon > $diskon->maximal_disc)
+                {
+                    $totalDiskon = $diskon->maximal_disc;
+                }
+                else
+                {
+                    return $totalDiskon;
+                }
             @endphp
             <div class="voucher-button-box">
-                <div class="voucher-button">Get Code Voucher</div>
+                <div class="voucher-button"><a href="{{ route('diskon.index') }}">Get Code Voucher</a></div>
             </div>
             <div class="subtotal-box">
                 <table class="subtotal-table">
@@ -100,11 +105,11 @@
                     </tr>
                     <tr>
                         <td class="subtotal-text">Diskon Amount</td>
-                        <td class="subtotal-text">- Rp {{ $diskonAmount }}</td>
+                        <td class="subtotal-text">- Rp {{ $totalDiskon }}</td>
                     </tr>
                     <tr>
                         <td class="subtotal-text">Total</td>
-                        <td class="subtotal-text">35k</td>
+                        <td class="subtotal-text">Rp {{ $orderSubtotal - $totalDiskon }}</td>
                     </tr>
                 </table>
             </div>
@@ -118,9 +123,9 @@
                     <td colspan="3" class="social-media-text">Our Social Media</td>
                 </tr>
                 <tr class="Social-media-logo">
-                    <td><img src="./assets/logo_whatsapp.png" class="whatsapp-logo"></td>
-                    <td><img src="./assets/logo_instagram.png" class="instagram-logo"></td>
-                    <td><img src="./assets/logo_twitter.png" class="twitter-logo"></td>
+                    <td><img src="/assets/logo_whatsapp.png" class="whatsapp-logo"></td>
+                    <td><img src="/assets/logo_instagram.png" class="instagram-logo"></td>
+                    <td><img src="/assets/logo_twitter.png" class="twitter-logo"></td>
                 </tr>
                 <tr class="Social-media-text">
                     <td class="whatsapp-text">+62 82123456789</td>

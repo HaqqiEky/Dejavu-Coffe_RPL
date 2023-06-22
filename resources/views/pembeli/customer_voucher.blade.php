@@ -33,7 +33,7 @@
                     <!-- Tambahkan </tr><tr> setelah setiap 2 diskon --> @endif <td>
                         <table class="content-table" border="0">
                             <tr>
-                                <td class="voucher-code">{{ $k->kode }}</td>
+                                <td class="voucher-code"><a class="voucher-code" href="{{ route('diskon.cart', ['id_diskon' => $k->id_diskon]) }}">{{ $k->kode }}</a></td>
                                 <td class="voucher-amount" rowspan="3">{{ $k->discount }} %</td>
                             </tr>
                             <tr>

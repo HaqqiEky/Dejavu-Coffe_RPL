@@ -46,6 +46,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/Diskon', [DiskonController::class, 'index'])->name('diskon.index');
     Route::get('/Cart/Diskon/{id_diskon}', [DiskonController::class, 'cart'])->name('diskon.cart');
+
+    Route::get('/Payment', [OrderListController::class, 'index'])->name('orderlist.index');
     
 });
 

@@ -73,7 +73,7 @@
                 @endforeach
             </table>
             <div class="voucher-button-box">
-                <div class="voucher-button">Get Code Voucher</div>
+                <div class="voucher-button"><a href="{{ route('diskon.index') }}">Get Code Voucher</a></div>
             </div>
             <div class="subtotal-box">
                 <table class="subtotal-table">
