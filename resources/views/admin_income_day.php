@@ -64,8 +64,10 @@
                 <th class="statistic-info-title" colspan="4">Total Income in a Day</th>
             </tr>
             <tr class="statistic-total">
-                <td colspan="4">Rp 280.000</td>
+                <td><img src="./assets/income.png" class="income-pic"></td>
+                <td colspan="3">Rp 280.000</td>
             </tr>
+            <tr class="gap"></tr>
             <tr class="statistic-info-head">
                 <td class="statistic-info-head-text">Product Name</td>
                 <td class="statistic-info-head-text">Quantity</td>

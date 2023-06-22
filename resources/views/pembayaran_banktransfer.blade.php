@@ -89,5 +89,18 @@
                 </tr>
             </table>
         </div>
+        <script>
+            var highlightableElements = document.getElementsByClassName('bank-pic-border');
+
+            for (var i = 0; i < highlightableElements.length; i++) {
+            highlightableElements[i].addEventListener('mouseenter', function() {
+                this.classList.add('highlight');
+            });
+
+            highlightableElements[i].addEventListener('mouseleave', function() {
+                this.classList.remove('highlight');
+            });
+            }
+        </script>
     </body>
 </html>
