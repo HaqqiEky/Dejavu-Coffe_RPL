@@ -81,7 +81,7 @@
                 <td class="order-info-head-text">Quantity</td>     
                 <td class="order-info-head-text">Unit Price</td>
                 <td class="order-info-head-text">Size</td>
-                <td class="order-info-head-text">Seugar</td>
+                <td class="order-info-head-text">Sugar</td>
                 <td class="order-info-head-text">Ice</td>
                 <td class="order-info-head-text">Whip</td>
                 <td class="order-info-head-text">Total</td>
