@@ -45,9 +45,9 @@
                 <th class="statistic-menu-title" colspan="3">Statistic Detail</th>
             </tr>
             <tr class="statistic-menu-head">
-                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="admin_statistic_day.php">Day</a></td>           
-                <td class="statistic-menu-head-text" style="background: #57381B; border-radius: 20px;"><a class="statistic-menu-head-text" href="admin_statistic_week.php">Week</a></td>     
-                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="admin_statistic_month.php">Month</a></td>
+                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="admin_income_day.php">Day</a></td>           
+                <td class="statistic-menu-head-text" style="background: #57381B; border-radius: 20px;"><a class="statistic-menu-head-text" href="admin_income_week.php">Week</a></td>     
+                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="admin_income_month.php">Month</a></td>
             </tr>
             <tr class="gap"></tr>
             <tr class="statistic-menu-box">
@@ -56,43 +56,35 @@
             <tr class="gap"></tr>
             <tr class="statistic-menu-box">
                 <td class="statistic-menu-detail" colspan="3"><a class="statistic-menu-detail" href="admin_income_day.php">Income</a></td>
-            </tr>>
+            </tr>
         </table>
         <div class="line"></div>
         <table class="statistic-info">
             <tr>
-                <th class="statistic-info-title" colspan="2">Total Ordered in a Week</th>
+                <th class="statistic-info-title" colspan="4">Total Income in a Week</th>
             </tr>
             <tr class="statistic-total">
-                <td colspan="2">24</td>
+                <td><img src="./assets/income.png" class="income-pic"></td>
+                <td colspan="3">Rp 280.000</td>
             </tr>
+            <tr class="gap"></tr>
             <tr class="statistic-info-head">
                 <td class="statistic-info-head-text">Product Name</td>
                 <td class="statistic-info-head-text">Quantity</td>
+                <td class="statistic-info-head-text">Unit Price</td>
+                <td class="statistic-info-head-text">Income</td>
             </tr>
             <tr>
                 <td class="statistic-info-detail">Caramel Frappucino</td>
                 <td class="statistic-info-detail">4</td>
+                <td class="statistic-info-detail">Rp 40.000</td>
+                <td class="statistic-info-detail">Rp 160.000</td>
             </tr>
             <tr>
-                <td class="statistic-info-detail">Caramel Frappucino</td>
-                <td class="statistic-info-detail">4</td>
-            </tr>
-            <tr>
-                <td class="statistic-info-detail">Caramel Frappucino</td>
-                <td class="statistic-info-detail">4</td>
-            </tr>
-            <tr>
-                <td class="statistic-info-detail">Caramel Frappucino</td>
-                <td class="statistic-info-detail">4</td>
-            </tr>
-            <tr>
-                <td class="statistic-info-detail">Caramel Frappucino</td>
-                <td class="statistic-info-detail">4</td>
-            </tr>
-            <tr>
-                <td class="statistic-info-detail">Caramel Frappucino</td>
-                <td class="statistic-info-detail">4</td>
+                <td class="statistic-info-detail">Caramel Java Chip Frappuccino</td>
+                <td class="statistic-info-detail">3</td>
+                <td class="statistic-info-detail">Rp 40.000</td>
+                <td class="statistic-info-detail">Rp 120.000</td>
             </tr>
         </table>
     </body>
