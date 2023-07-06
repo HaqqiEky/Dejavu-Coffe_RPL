@@ -16,29 +16,35 @@
             <div class="menu-box">
                 <div class="dashboard-box">
                     <img src="./assets/home.svg" class="dashboard-logo">
-                    <div class="dashboard-text">Dashboard</div>
+                    <div ><a href="/Home" class="dashboard-text">Dashboard</a></div>
                 </div>
                 <div class="order-box">
                     <img src="./assets/list.svg" class="order-logo">
-                    <div class="order-text">Order List</div>
+                    <div ><a href="{{ route('orderlist.index') }}" class="order-text">Order List</a></div>
                 </div>
                 <div class="statistic-box">
                     <img src="./assets/statistic.svg" class="statistic-logo">
-                    <div class="statistic-text">Statistic Detail</div>
+                    <div ><a href="{{ route('statistik_day') }}" class="statistic-text">Statistic Detail</a></div>
                 </div>
                 <div class="beverage-box">
                     <img src="./assets/beverage.svg" class="beverage-logo">
-                    <div class="beverage-text">Beverage</div>
+                    <div ><a href="{{ route('beverage') }}" class="beverage-text">beverage</a></div>
                 </div>
                 <div class="archive-box">
                     <img src="./assets/trash.svg" class="archive-logo">
-                    <div class="archive-text">Archive</div>
+                    <div ><a href="{{ route('archive') }}" class="archive-text">Archive</a></div>
                 </div>
             </div>
         </div>
         <div class="profile-box">
             <img src="./assets/log-out.svg" class="logout-logo"/>
-            <div class="hello-text">Hello, Haqqi</div>
+            <form  action="{{ route('Logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="nav-link text-body font-weight-bold px-0 py-0" style="border: none; background: none;">
+                    <i class="fa fa-sign-out-alt ms-sm-1"></i>    
+                    <a class="login-text">Hello Admin</a>
+                </button>
+            </form>
         </div>
         <table class="category" border="0">
             <tr>

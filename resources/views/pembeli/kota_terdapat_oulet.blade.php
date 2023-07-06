@@ -21,10 +21,10 @@
                             </button>
                         </form>
                     </td>
-                    <td class="home-button">HOME</td>
-                    <td class="about-button">ABOUT</td>
-                    <td class="contact-button">CONTACT</td>
-                    <td class="logo-chart-box"><img src="./assets/shopping-cart.png" class="logo-chart"></td>
+                    <td class="home-button"><a href="/" class="login-text">HOME</a></td>
+                    <td class="about-button"><a href="#" class="login-text">ABOUT</a></td>
+                    <td class="contact-button"><a href="#" class="login-text">CONTACT</a></td>
+                    <td class="logo-chart-box"><a href="/Cart" class="login-text"><img src="./assets/shopping-cart.png" class="logo-chart"></a></td>
                 </tr>
             </table>
             <div class="nav-bar-pic-box"><img src="./assets/nav-bar_pic.png" class="nav-bar-pic"></div>

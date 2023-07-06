@@ -12,11 +12,19 @@
             <table class="header-box">
                 <tr>
                     <td class="logo-text">DejaVu C<img src="/assets/logo.png" class="logo-nav-bar">offee</td>
-                    <td class="login-button">LOGIN</td>
-                    <td class="home-button">HOME</td>
-                    <td class="about-button">ABOUT</td>
-                    <td class="contact-button">CONTACT</td>
-                    <td class="logo-chart-box"><img src="/assets/shopping-cart.png" class="logo-chart"></td>
+                    <td class = "login-button">
+                        <form  action="{{ route('Logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="nav-link text-body font-weight-bold px-0 py-0" style="border: none; background: none;">
+                                <i class="fa fa-sign-out-alt ms-sm-1"></i>    
+                                <a class="login-text">LOGOUT</a>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="home-button"><a href="/Home" class="login-text">HOME</a></td>
+                    <td class="about-button"><a href="#" class="login-text">ABOUT</a></td>
+                    <td class="contact-button"><a href="#" class="login-text">CONTACT</a></td>
+                    <td class="logo-chart-box"><a href="/Cart" class="login-text"><img src="/assets/shopping-cart.png" class="logo-chart"></a></td>
                 </tr>
             </table>
             <div class="nav-bar-pic-box"><img src="/assets/nav-bar_pic.png" class="nav-bar-pic"></div>
@@ -91,9 +99,11 @@
                     return $totalDiskon;
                 }
             @endphp
+
             <div class="voucher-button-box">
-                <div class="voucher-button"><a href="{{ route('diskon.index') }}">Get Code Voucher</a></div>
+                <div class="voucher-button"><a class="payment-text" href="{{ route('diskon.index') }}">Get Code Voucher</a></div>
             </div>
+            
             <div class="subtotal-box">
                 <table class="subtotal-table">
                     <tr>
@@ -113,8 +123,9 @@
                     </tr>
                 </table>
             </div>
+
             <div class="payment-button-box">
-                <div class="payment-button">Poceed To Payment</div>
+                <div class="payment-button"><a href="/Payment" class="payment-text">Poceed To Payment</a></div>
             </div>
         </div>
         <div class="footer">

@@ -3,9 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\Gate;
-
-// use Illuminate\Support\Facades\Gate;
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -23,12 +21,12 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->registerPolicies();
-
         Gate::define('pembeli', function ($user) {
-            // Logika untuk menentukan apakah pengguna memiliki peran "pembeli"
-            // Misalnya, jika pengguna memiliki kolom "role" dengan nilai "pembeli" dalam tabel pengguna
             return $user->role === 'pembeli';
+        });
+
+        Gate::define('administrator', function ($user) {
+            return $user->role === 'administrator';
         });
     }
 }

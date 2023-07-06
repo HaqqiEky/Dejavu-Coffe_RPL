@@ -22,9 +22,18 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Haqqi',
             'username' => 'haq',
-            'no_telp' => '081907319592',
+            'no_telp' => '1051609749',
             'email' => 'haqqi@gmail.com',
-            'password' => Hash::make('arwank111'),
+            'password' => Hash::make('password'),
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'username' => 'admin',
+            'no_telp' => '0584016259',
+            'email' => 'admin@example.com',
+            'role' => 'administrator',
+            'password' => Hash::make('password'),
         ]);
 
         $kota = new Kota();

@@ -24,7 +24,8 @@ class Cart extends Model
         return $this->belongsToMany(Menu::class, 'carts_menus', 'cart_id', 'menu_id');
     }
 
-    public function OrderLists() {
-        return $this->belongsToMany(OrderList::class);
-    }
+    public function OrderList()
+{
+    return $this->belongsToMany(OrderList::class, 'carts_orderList', 'id_cart', 'id_order');
+}
 }

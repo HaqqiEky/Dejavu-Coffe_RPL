@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class PembeliMiddleware
+class AdministratorMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class PembeliMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $role = $request->user()->role;
-        if ($role === 'pembeli') {
+        if ($role === 'administrator') {
             return $next($request);
         }
         abort(403, 'Forbidden');

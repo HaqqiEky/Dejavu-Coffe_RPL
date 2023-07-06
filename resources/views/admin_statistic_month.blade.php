@@ -16,52 +16,58 @@
             <div class="menu-box">
                 <div class="dashboard-box">
                     <img src="./assets/home.svg" class="dashboard-logo">
-                    <div class="dashboard-text">Dashboard</div>
+                    <div ><a href="/Home" class="dashboard-text">Dashboard</a></div>
                 </div>
                 <div class="order-box">
                     <img src="./assets/list.svg" class="order-logo">
-                    <div class="order-text">Order List</div>
+                    <div ><a href="{{ route('orderlist.index') }}" class="order-text">Order List</a></div>
                 </div>
                 <div class="statistic-box">
                     <img src="./assets/statistic.svg" class="statistic-logo">
-                    <div class="statistic-text">Statistic Detail</div>
+                    <div ><a href="{{ route('statistik_day') }}" class="statistic-text">Statistic Detail</a></div>
                 </div>
                 <div class="beverage-box">
                     <img src="./assets/beverage.svg" class="beverage-logo">
-                    <div class="beverage-text">beverage</div>
+                    <div ><a href="{{ route('beverage') }}" class="beverage-text">beverage</a></div>
                 </div>
                 <div class="archive-box">
                     <img src="./assets/trash.svg" class="archive-logo">
-                    <div class="archive-text">Archive</div>
+                    <div ><a href="{{ route('archive') }}" class="archive-text">Archive</a></div>
                 </div>
             </div>
         </div>
         <div class="profile-box">
             <img src="./assets/log-out.svg" class="logout-logo"/>
-            <div class="hello-text">Hello, Haqqi</div>
+            <form  action="{{ route('Logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="nav-link text-body font-weight-bold px-0 py-0" style="border: none; background: none;">
+                    <i class="fa fa-sign-out-alt ms-sm-1"></i>    
+                    <a class="login-text">Hello Admin</a>
+                </button>
+            </form>
         </div>
         <table class="statistic-menu" border="0">
             <tr>
                 <th class="statistic-menu-title" colspan="3">Statistic Detail</th>
             </tr>
             <tr class="statistic-menu-head">
-                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="admin_income_day.php">Day</a></td>           
-                <td class="statistic-menu-head-text" style="background: #57381B; border-radius: 20px;"><a class="statistic-menu-head-text" href="admin_income_week.php">Week</a></td>     
-                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="admin_income_month.php">Month</a></td>
+                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="{{ route('statistik_day') }}">Day</a></td>           
+                <td class="statistic-menu-head-text"><a class="statistic-menu-head-text" href="{{ route('statistik_week') }}">Week</a></td>     
+                <td class="statistic-menu-head-text" style="background: #57381B; border-radius: 20px;"><a class="statistic-menu-head-text" href="{{ route('statistik_month') }}">Month</a></td>
             </tr>
             <tr class="gap"></tr>
             <tr class="statistic-menu-box">
-                <td class="statistic-menu-detail" colspan="3"><a class="statistic-menu-detail" href="admin_statistic_day.php">Total Ordered</a></td>
+                <td class="statistic-menu-detail" colspan="3"><a class="statistic-menu-detail" href="{{ route('statistik_day') }}">Total Ordered</a></td>
             </tr>
             <tr class="gap"></tr>
             <tr class="statistic-menu-box">
-                <td class="statistic-menu-detail" colspan="3"><a class="statistic-menu-detail" href="admin_income_day.php">Income</a></td>
+                <td class="statistic-menu-detail" colspan="3"><a class="statistic-menu-detail" href="{{ route('income_day') }}">Income</a></td>
             </tr>
         </table>
         <div class="line"></div>
         <table class="statistic-info">
             <tr>
-                <th class="statistic-info-title" colspan="4">Total Income in a Week</th>
+                <th class="statistic-info-title" colspan="4">Total Income in a Month</th>
             </tr>
             <tr class="statistic-total">
                 <td><img src="./assets/income.png" class="income-pic"></td>

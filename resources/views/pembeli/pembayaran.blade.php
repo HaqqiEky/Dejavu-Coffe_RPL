@@ -11,12 +11,20 @@
         <div class="header">
             <table class="header-box">
                 <tr>
-                    <td class="logo-text">DejaVu C<img src="./assets/logo.png" class="logo-nav-bar">offee</td>
-                    <td class="login-button">LOGIN</td>
-                    <td class="home-button">HOME</td>
-                    <td class="about-button">ABOUT</td>
-                    <td class="contact-button">CONTACT</td>
-                    <td class="logo-chart-box"><img src="./assets/shopping-cart.png" class="logo-chart"></td>
+                    <td class="logo-text">DejaVu C<img src="/assets/logo.png" class="logo-nav-bar">offee</td>
+                    <td class = "login-button">
+                        <form  action="{{ route('Logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="nav-link text-body font-weight-bold px-0 py-0" style="border: none; background: none;">
+                                <i class="fa fa-sign-out-alt ms-sm-1"></i>    
+                                <a class="login-text">LOGOUT</a>
+                            </button>
+                        </form>
+                    </td>
+                    <td class="home-button"><a href="/" class="login-text">HOME</a></td>
+                    <td class="about-button"><a href="#" class="login-text">ABOUT</a></td>
+                    <td class="contact-button"><a href="#" class="login-text">CONTACT</a></td>
+                    <td class="logo-chart-box"><a href="/Cart" class="login-text"><img src="./assets/shopping-cart.png" class="logo-chart"></a></td>
                 </tr>
             </table>
             <div class="nav-bar-pic-box"><img src="./assets/nav-bar_pic.png" class="nav-bar-pic"></div>
@@ -42,29 +50,29 @@
         <div class="container-2">
             <table class="metode-payment-box" border="0">
                 <tr>
-                    <td><div class="border-button-payment"><div class="button-payment"></div></div></td>
-                    <td><div class="payment-text">Bank Transfer - Virtual Account</div></td>
+                    <td><div class="border-button-payment"><div class="separate-line"></div></div></td>
+                    <td><div class="payment-text"><a href="/Payment/Bank" class="payment-text">Bank Transfer - Virtual Account</a></div></td>
                 </tr>
                 <tr>
                     <td class="separate-line-box" colspan="2"><div class="separate-line"></div></td>
                 </tr>
                 <tr>
                     <td><div class="border-button-payment"></div></td>
-                    <td><div class="payment-text">GO-PAY</div></td>
+                    <td><div class="payment-text"><a href="/Payment/Gopay" class="payment-text">GO-PAY</a></div></td>
                 </tr>
                 <tr>
                     <td class="separate-line-box" colspan="2"><div class="separate-line"></div></td>
                 </tr>
                 <tr>
                     <td><div class="border-button-payment"></div></td>
-                    <td><div class="payment-text">OVO</div></td>
+                    <td><div class="payment-text"><a href="#" class="payment-text">OVO</a></div></td>
                 </tr>
                 <tr>
                     <td class="separate-line-box" colspan="2"><div class="separate-line"></div></td>
                 </tr>
                 <tr>
                     <td><div class="border-button-payment"></div></td>
-                    <td><div class="payment-text">Bayar di Tempat</div></td>
+                    <td><div class="payment-text"><a href="#" class="payment-text">Bayar di Tempat</a></div></td>
                 </tr>
             </table>
         </div>

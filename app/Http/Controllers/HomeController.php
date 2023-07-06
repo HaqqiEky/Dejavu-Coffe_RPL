@@ -17,6 +17,10 @@ class HomeController extends Controller
         
         if ($user->can('pembeli')) {
             return view('pembeli.home', compact('user'));
+        }elseif ($user->can('administrator')) {
+            return view('admin_dashboard', compact('user'));
+        } else {
+            abort(403, 'Forbidden');
         }
     }
 }

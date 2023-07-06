@@ -18,6 +18,73 @@ body {
     position: relative;
     background-color: #FFF8EE;
 }
+.dashboard-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #57381B;
+    position: relative;
+    top: 6px;
+    left: 20px;
+    text-decoration: none;
+}
+.order-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #57381B;
+    position: relative;
+    top: 6px;
+    left: 20px;
+    text-decoration: none;
+}
+.statistic-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #57381B;
+    position: relative;
+    top: 6px;
+    left: 20px;
+    text-decoration: none;
+}
+.beverage-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #57381B;
+    position: relative;
+    top: 6px;
+    left: 20px;
+    text-decoration: none;
+}
+.archive-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #57381B;
+    position: relative;
+    top: 6px;
+    left: 20px;
+    text-decoration: none;
+}
+.login-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #57381B;
+    position: relative;
+    top: 5px;
+    text-decoration: none;
+
+}
 .logo-box {
     position:relative;
     top: 20px;
@@ -39,7 +106,7 @@ body {
     width: 40px;
     height: 40px;
     position: relative;
-    top: 5px;
+    top: -5px;
     left: 0px;
 }
 .menu-box {
@@ -67,16 +134,6 @@ body {
     top: 4px;
     position: relative;
 }
-.dashboard-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    color: #57381B;
-    position: relative;
-    top: 6px;
-    left: 20px;
-}
 .order-box {
     background: rgba(87, 56, 27, 0.28);
     border-radius: 8px;
@@ -94,16 +151,6 @@ body {
     top: 4px;
     position: relative;
 }
-.order-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    color: #57381B;
-    position: relative;
-    top: 6px;
-    left: 20px;
-}
 .statistic-box {
     top: 60px;
     width: 200px;
@@ -118,16 +165,6 @@ body {
     left: 3px;
     top: 4px;
     position: relative;
-}
-.statistic-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    color: #57381B;
-    position: relative;
-    top: 6px;
-    left: 20px;
 }
 .beverage-box {
     top: 90px;
@@ -144,16 +181,6 @@ body {
     top: 4px;
     position: relative;
 }
-.beverage-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    color: #57381B;
-    position: relative;
-    top: 6px;
-    left: 20px;
-}
 .archive-box {
     top: 120px;
     width: 200px;
@@ -168,16 +195,6 @@ body {
     left: 3px;
     top: 4px;
     position: relative;
-}
-.archive-text {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    color: #57381B;
-    position: relative;
-    top: 6px;
-    left: 20px;
 }
 .profile-box {
     position: relative;

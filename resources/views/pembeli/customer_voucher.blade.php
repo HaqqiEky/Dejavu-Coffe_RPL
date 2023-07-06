@@ -37,10 +37,10 @@
                                 <td class="voucher-amount" rowspan="3">{{ $k->discount }} %</td>
                             </tr>
                             <tr>
-                                <td class="voucher-detail">{{ $k->minimum }}</td>
+                                <td class="voucher-detail">Minimum Payment Rp {{ $k->minimal }}</td>
                             </tr>
                             <tr>
-                                <td class="voucher-detail">{{ $k->maximal_disc }}</td>
+                                <td class="voucher-detail">Maximal discount Rp {{ $k->maximal_disc }}</td>
                             </tr>
                         </table>
                     </td> @php $count++; // Tambahkan 1 ke count setelah setiap diskon @endphp @endforeach

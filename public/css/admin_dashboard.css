@@ -78,6 +78,7 @@ body {
     position: relative;
     top: 6px;
     left: 20px;
+    text-decoration: none;
 }
 .order-box {
     top: 30px;
@@ -103,6 +104,7 @@ body {
     position: relative;
     top: 6px;
     left: 20px;
+    text-decoration: none;
 }
 .statistic-box {
     top: 60px;
@@ -128,6 +130,7 @@ body {
     position: relative;
     top: 6px;
     left: 20px;
+    text-decoration: none;
 }
 .beverage-box {
     top: 90px;
@@ -153,6 +156,7 @@ body {
     position: relative;
     top: 6px;
     left: 20px;
+    text-decoration: none;
 }
 .archive-box {
     top: 120px;
@@ -178,6 +182,7 @@ body {
     position: relative;
     top: 6px;
     left: 20px;
+    text-decoration: none;
 }
 .profile-box {
     position: relative;
@@ -191,6 +196,18 @@ body {
 .logout-logo {
     width: 35px;
     height: 35px;
+}
+.login-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #57381B;
+    position: relative;
+    top: 5px;
+    text-decoration: none;
+
 }
 .hello-text {
     font-family: 'Poppins';
